@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  unumber: 
+  uname: MyString
+  usex: 
+  uage: 
+  uemail: MyString
+  classschool: one
+
+two:
+  unumber: 
+  uname: MyString
+  usex: 
+  uage: 
+  uemail: MyString
+  classschool: two

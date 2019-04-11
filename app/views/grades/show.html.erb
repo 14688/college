@@ -1,0 +1,25 @@
+<div>
+  <strong>grade_name:</strong>
+  <%= @grade.gname%>
+</div>
+
+<%=form_for @classschool,url: school_grade_classschools_path(@school, @grade) do |f| %>
+
+  <table>
+
+    <tr>
+      <td>name</td>
+      <td><%=f.text_field:cname%></td>
+    </tr>
+
+    <tr>
+      <td>clocationgrade</td>
+      <td><%=f.text_field:clocationgrade%></td>
+    </tr>
+
+    <tr>
+      <%=f.submit%>
+    </tr>
+
+  </table>
+<% end %>

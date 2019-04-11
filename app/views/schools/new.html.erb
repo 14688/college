@@ -1,0 +1,26 @@
+<h1>add</h1>
+<%= form_for :school,url: schools_path do |f|%>
+  <table>
+
+    <tr>
+      <td>sname</td>
+      <td><%=f.text_area :sname %></td>
+    </tr>
+
+    <tr>
+      <td>site</td>
+      <td><%=f.text_area :ssite%></td>
+    </tr>
+
+    <tr>
+      <td>phone</td>
+      <td><%=f.text_area :sphone%></td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td><%=f.submit%></td>
+    </tr>
+    
+  </table>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tnumber: 
+  tname: MyString
+  tsex: 
+  title: MyString
+  temail: MyString
+  student: one
+
+two:
+  tnumber: 
+  tname: MyString
+  tsex: 
+  title: MyString
+  temail: MyString
+  student: two

@@ -1,0 +1,23 @@
+<h1>Edit article</h1>
+
+<%=form_for(@school) do |f|%>
+
+  <p>
+    <%=f.label :sname%>tit<br>
+    <%=f.text_field :sname%>
+  </p>
+  <p>
+    <%=f.label :ssite%><br>
+    <%=f.text_area :ssite%>
+  </p>
+  <p>
+    <%=f.label :sphone%><br>
+    <%=f.text_area :sphone%>
+  </p>
+  <p>
+    <%=f.submit%>
+  </p>
+
+<% end %>
+
+<%= link_to 'show all', schools_path %>

@@ -1,0 +1,48 @@
+<div>
+  <div>
+    <strong>clases_name:</strong>
+    <%= @classschool.cname%>
+  </div>
+
+  <div>
+    <strong>class_grade:</strong>
+    <%= @classschool.clocationgrade%>
+  </div>
+</div>
+
+
+<%=form_for @student,url: school_grade_classschool_students_path(params[:school_id],params[:grade_id],@classschool,@student) do |f| %>
+
+  <table>
+
+    <tr>
+      <td>student_unumber</td>
+      <td><%=f.text_field:unumber%></td>
+    </tr>
+
+    <tr>
+      <td>student_name</td>
+      <td><%=f.text_field:uname%></td>
+    </tr>
+
+    <tr>
+      <td>student_sex</td>
+      <td><%=f.text_field:usex%></td>
+    </tr>
+
+    <tr>
+      <td>student_age</td>
+      <td><%=f.text_field:uage%></td>
+    </tr>
+
+    <tr>
+      <td>student_email</td>
+      <td><%=f.text_field:uemail%></td>
+    </tr>
+
+    <tr>
+      <%=f.submit%>
+    </tr>
+
+  </table>
+<% end %>

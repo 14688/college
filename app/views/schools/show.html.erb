@@ -1,0 +1,46 @@
+<table>
+  <tr>
+    <td>name:</td>
+    <td><%=@school.sname%></td>
+  </tr>
+
+  <tr>
+    <td>site:</td>
+    <td><%=@school.ssite%></td>
+  </tr>
+
+  <tr>
+    <td>phone:</td>
+    <td><%=@school.sphone%></td>
+  </tr>
+
+  <tr>
+    <td><%=link_to 'exit',edit_school_path(@school)%></td>
+    <td><%=link_to 'show all',schools_path%></td>
+  </tr>
+</table>
+
+<%@school.grade.each do |ge|%>
+  <div>
+    <strong>grade_name:</strong>
+    <%=ge.gname%>
+
+    <%=link_to 'destroy grade',[ge.school,ge],
+    method: :delete,
+    data:{confirm: 'Are you sure?'} %>
+  </div>
+<%end%>
+
+
+<%=form_for([@school,@school.grade.build]) do |f| %>
+  <table>
+    <tr>
+      <td>name:</td>
+      <td><%=f.text_field:gname%></td>
+    </tr>
+
+    <tr>
+      <%=f.submit%>
+    </tr>
+  </table>
+<% end %>

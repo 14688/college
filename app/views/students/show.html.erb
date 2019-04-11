@@ -1,0 +1,61 @@
+<div>
+  <strong>student_unuber:</strong>
+  <%= @student.unumber%>
+</div>
+
+<div>
+  <strong>student_name:</strong>
+  <%= @student.uname%>
+<div>
+</div>
+
+<div>
+  <strong>student_sex:</strong>
+<%= @student.usex%>
+</div>
+
+<div>
+  <strong>student_age:</strong>
+  <%= @student.uage%>
+</div>
+
+<div>
+  <strong>student_email:</strong>
+  <%= @student.uemail%>
+</div>
+
+<%=form_for @teacher,url: school_grade_classschool_student_teachers_path(params[:school_id],params[:grade_id],@classschool,@student) do |f| %>
+
+  <table>
+
+    <tr>
+      <td>teacher_unumber</td>
+      <td><%=f.text_field:tnumber%></td>
+    </tr>
+
+    <tr>
+      <td>teacher_name</td>
+      <td><%=f.text_field:tname%></td>
+    </tr>
+
+    <tr>
+      <td>teacher_sex</td>
+      <td><%=f.text_field:tsex%></td>
+    </tr>
+
+    <tr>
+      <td>teacher_age</td>
+      <td><%=f.text_field:tage%></td>
+    </tr>
+
+    <tr>
+      <td>student_email</td>
+      <td><%=f.text_field:uemail%></td>
+    </tr>
+
+    <tr>
+      <%=f.submit%>
+    </tr>
+
+  </table>
+<% end %>
